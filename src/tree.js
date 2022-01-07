@@ -107,9 +107,9 @@ function format_size (n) {
   if (n < 0) return 'invalid size'
   const units = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB']
   let flag = 0
-  while (n >= 1024) {
-    n = n / 1024
-    flag++
-  }
+  //while (n >= 1024) {
+  //  n = n / 1024
+  //  flag++
+  //}
   return n.toFixed(2) + ' ' + units[flag]
 }
