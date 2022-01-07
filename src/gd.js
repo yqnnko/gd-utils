@@ -839,7 +839,7 @@ function find_dupe (arr) {
   for (const file of files) {
     const { md5Checksum, parent, name, size } = file
     // 根据文件位置和md5值来判断是否重复
-    const key = parent + '|' + md5Checksum
+    const key = parent + '|' + md5Checksum +  '|' + name
     // const key = md5Checksum + '|' + size
     if (exists[key]) {
       dupe_files.push(file)
